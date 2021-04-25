@@ -15,7 +15,7 @@ export default class StoreClass extends React.Component {
     }
 
     render() {
-    const icon = this.state.list ? "view_list" : "view_module";
+    const viewElems = this.state.list ? "view_list" : "view_module";
     const products = [{
         name: "Nike Metcon 2",
         price: "130",
@@ -49,9 +49,10 @@ export default class StoreClass extends React.Component {
     }];
     return (
         <div>
-            <IconSwitch icon={icon} onSwitch={this.onClick}/>
-            {/* <CardsView cards={products} />    */}
-            <ListView items={products} />                  
+            <IconSwitch icon={viewElems} onSwitch={this.onClick}/>
+            {this.state.list ? <CardsView cards={products}/> : <ListView items={products} /> }
+            {/* <CardsView cards={products}/>   
+            <ListView items={products} />                   */}
         </div>      
         )
     }

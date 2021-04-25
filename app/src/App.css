@@ -27,7 +27,9 @@
 }
 
 img {
+  object-fit: cover;
   width: 300px;
+  height: 180px;
 }
 
 .wrapper-card, .wrapper-item {
@@ -95,6 +97,10 @@ img {
   background: var(--color-red);
   color: white;
   cursor: pointer;
+}
+
+.hide-block {
+  display: none;
 }
 
 @media (prefers-reduced-motion: no-preference) {
