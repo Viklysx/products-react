@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+:root {
+  --color-red: #f13a2f;
+}
 
 .App {
   text-align: center;
@@ -7,6 +10,91 @@
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+}
+
+.icon-wrapper {
+  text-align: end;
+  padding: 30px;
+}
+
+.icon-element {
+  font-size: 30px;
+  transition: 0.3s;
+}
+
+.icon-element:hover {
+  cursor: pointer;
+}
+
+img {
+  width: 300px;
+}
+
+.wrapper-card, .wrapper-item {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  max-width: 1400px;
+}
+
+.wrapper-item {
+  flex-direction: column;
+}
+
+.card, .item {
+  margin: 20px 50px;
+  box-shadow:  0px 6px 16px 0px rgba(50, 50, 50, 0.6);
+  padding: 30px;
+  background: whitesmoke;
+}
+
+.item {
+  margin: 10px 50px;
+  box-shadow: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card-title, .item-title {
+  text-transform: uppercase;
+  font-size: 25px;
+  margin-block-start: 0;
+  font-weight: 500;
+}
+
+.card-color, .item-color {
+  margin-block-start: 0;
+  font-size: 20px;
+}
+
+.card-block-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card-price, .item-price {
+  font-size: 25px;
+  color: var(--color-red);
+  font-weight: 500;
+}
+
+.card-btn, .item-btn {
+  outline: none;
+  color: var(--color-red);
+  font-size: 16px;
+  font-weight: 600;
+  padding: 10px;
+  border: 2px solid var(--color-red);
+  border-radius: 15px;
+  transition: 0.3s;
+}
+
+.card-btn:hover, .item-btn:hover {
+  background: var(--color-red);
+  color: white;
+  cursor: pointer;
 }
 
 @media (prefers-reduced-motion: no-preference) {
